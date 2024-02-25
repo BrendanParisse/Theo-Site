@@ -1,0 +1,61 @@
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInFromRightBack {
+    0% {
+        transform: translateX(150%) scale(2);
+    }
+
+    100% {
+        transform: translateX(0%) scale(2);
+    }
+}
+
+@keyframes slideInFromLeftBack {
+    0% {
+        transform: translateX(0%) scale(2);
+    }
+
+    100% {
+        transform: translateX(-150%) scale(2);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes ApparitionDescriptif {
+    from {
+        transform: translateX(500px);
+    }
+
+    to {
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes showTitre {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

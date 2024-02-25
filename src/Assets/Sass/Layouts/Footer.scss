@@ -1,0 +1,34 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    gap: 10em;
+
+    @media screen and (max-width: 1024px) {
+        gap: 0;
+        bottom: 2px;
+    }
+
+    p {
+        margin: 5px;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 7px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+}

@@ -1,0 +1,117 @@
+.Carrousel {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    @extend %flex-center;
+    overflow: hidden;
+    list-style: none;
+    gap: 0.4em;
+
+    @media screen and (max-width: 1024px) {
+        width: 95%;
+        height: 60%;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    li {
+        position: relative;
+        z-index: 10;
+        height: 80%;
+        width: 23%;
+        transition: transform 0.4s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+
+            button {
+                opacity: 1;
+            }
+        }
+
+        .Photo {
+            z-index: 10;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            box-shadow: 0px 4px 6px -1px rgba(6, 24, 44, 0.65);
+            border-radius: 5px;
+        }
+
+        div {
+            width: max-content;
+            position: absolute;
+            @extend %column-center;
+            z-index: 10;
+            top: 50%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+
+            h2 {
+                text-transform: uppercase;
+                color: white;
+                font-size: 24px;
+                margin: 0.5em;
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 12px;
+                }
+            }
+
+            button {
+                font-family: 'Alata';
+                text-transform: uppercase;
+                display: block;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.8);
+                color: black;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                border: none;
+                cursor: pointer;
+
+
+                @media screen and (max-width: 1024px) {
+                    padding: 5px;
+                    font-size: 10px;
+                }
+            }
+
+            .btn_galerie {
+                background: rgb(1, 69, 114);
+                background: linear-gradient(90deg, rgba(1, 69, 114, 0.8) 0%, rgba(29, 115, 163, 0.8) 100%);
+                color: white;
+
+                &:hover {
+                    background: rgb(1, 69, 114);
+                    background: linear-gradient(90deg, rgba(1, 69, 114, 1) 0%, rgba(29, 115, 163, 1) 100%);
+                }
+            }
+
+            .btn_formulaire {
+                background-color: rgb(255, 255, 255, 0.8);
+                color: black;
+
+                &:hover {
+                    background: white;
+                }
+            }
+        }
+    }
+
+    .grayscale {
+        filter: brightness(65%);
+        transition: filter 0.4s ease;
+    }
+
+    .active {
+        transform: scale(1.1);
+        z-index: 15;
+
+        img {
+            border: solid 2px rgb(255, 255, 255, 0.4);
+        }
+    }
+}
