@@ -699,6 +699,7 @@ body {
                 @extend %flex-center;
                 margin: auto;
                 height: 100%;
+                width: 90%;
 
                 @media screen and (max-width: 1024px) {
                     flex-direction: column;
