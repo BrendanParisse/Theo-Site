@@ -1,4 +1,4 @@
-const token = process.env.REACT_APP_API_TOKEN;
+const token = 'process.env.REACT_APP_API_TOKEN';
 
 export async function ApiDataAccueil() {
     try {

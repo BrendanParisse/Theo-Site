@@ -13,7 +13,7 @@ const Contact = () => {
         try {
             const apiData = await ApiDataContact();
             if (apiData && apiData.data && apiData.data.length > 0) {
-                const imageUrl = `http://localhost:1337${apiData.data[0].attributes.Photo.data.attributes.url}`;
+                const imageUrl = `https://my-strapi.kevinlebot.com${apiData.data[0].attributes.Photo.data.attributes.url}`;
                 setCurrentImageUrl(imageUrl);
                 const descriptionText = apiData.data[0].attributes.Description;
                 setDescription(descriptionText);

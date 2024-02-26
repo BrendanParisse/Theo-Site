@@ -7,9 +7,6 @@ import Description from '../../../Components/Description/Description.js';
 const Service = () => {
     const location = useLocation();
     const [selectedCategory, setSelectedCategory] = useState(location.state ? location.state.selectedCategory : "");
-
-
-
     const [urls, setUrls] = useState({});
     const [descriptions, setDescriptions] = useState([]);
     const [titles, setTitles] = useState([]);
@@ -37,7 +34,7 @@ const Service = () => {
                         const imageUrl = item.attributes.Photo.data[0].attributes.url;
                         const imageCategory = item.attributes.theo_categorie.data.attributes.Categorie;
 
-                        updatedUrls[imageId] = { imageUrl: `http://localhost:1337${imageUrl}`, category: imageCategory };
+                        updatedUrls[imageId] = { imageUrl: `https://my-strapi.kevinlebot.com${imageUrl}`, category: imageCategory };
                     });
 
                     setUrls(updatedUrls);

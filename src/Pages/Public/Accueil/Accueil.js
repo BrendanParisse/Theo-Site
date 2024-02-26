@@ -36,7 +36,7 @@ const Accueil = () => {
                     return entry.attributes.Banniere.data.map(banniere => {
                         return {
                             id: banniere.id,
-                            url: `http://localhost:1337${banniere.attributes.url}`
+                            url: `https://my-strapi.kevinlebot.com${banniere.attributes.url}`
                         };
                     });
                 }).flat();

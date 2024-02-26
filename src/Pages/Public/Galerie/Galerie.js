@@ -29,7 +29,7 @@ const Galerie = () => {
                         category: item.attributes.theo_categorie.data.attributes.Categorie,
                         images: item.attributes.Photo.data.map(imageData => ({
                             id: imageData.id,
-                            url: `http://localhost:1337${imageData.attributes.url}`,
+                            url: `https://my-strapi.kevinlebot.com${imageData.attributes.url}`,
                             formats: imageData.attributes.formats
                         }))
                     }));
