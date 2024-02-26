@@ -777,7 +777,6 @@ body .SectionGalerie .Container_Galerie {
   }
 }
 body .SectionGalerie .Container_Galerie .Galerie {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
